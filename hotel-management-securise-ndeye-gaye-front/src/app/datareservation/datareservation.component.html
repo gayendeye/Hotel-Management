@@ -1,0 +1,120 @@
+<body>
+    <div class="container-xxl bg-white p-0">
+    
+<app-navbar></app-navbar>
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(assets/img/carousel-1.jpg);">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Information of the reservation</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="#" routerLink="/home">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#" routerLink="/room">Rooms</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+
+<!--Tableau-->
+<h3>Welcome To Salihat Hotel</h3>  <br>
+<div class="button-row">
+ 
+</div>
+            <table > <br>
+              <tr>     
+                 <!-- <th>Room Id</th> -->
+                <th>Reservation Id</th>
+                <th>date In</th>
+                <th>date Out</th>
+                <th>Number of Person</th>
+                <th>Number of the Room</th>
+
+                <th>Action</th>
+              </tr>
+
+              <tbody *ngFor="let r of reservation">
+
+                <!-- <td>{{ r.room?.roomId }}</td> -->
+
+                <td>{{ r.reservationId }}</td>
+
+                <td>{{ r.dateInn | date:'EEEE dd MMMM YYYY' }}</td>
+     
+                <td>{{ r.dateOut }}</td>
+
+                <td>{{ r.numberPerson }}</td>
+
+                <td>{{ r.room?.numberRoom }}</td>
+
+
+
+   <a  routerLink="/guest" class="btn btn-info" (click)="findreservation()">Confirm</a>  &nbsp;&nbsp;
+
+   <a  [routerLink]="['/datareservation/', r.reservationId]" class="btn btn-danger" (click)="deleteRerservation(r.reservationId)">Cancel</a>  &nbsp;&nbsp;
+
+
+   <!-- <button type="button" (click)="deleteRerservation(r.reservationId)" class="btn btn-danger">Delete</button> -->
+
+
+   
+
+
+                <!-- <td> {{ r.room?.roomId }} </td> -->
+            </tbody>
+            </table>
+    <!--end tabeau-->        
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl testimonial mt-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s" style="margin-bottom: 90px;">
+            <div class="container">
+                <div class="owl-carousel testimonial-carousel py-5">
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="assets/img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="assets/img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                    <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
+                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd et erat magna eos</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="assets/img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Client Name</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                        <i class="fa fa-quote-right fa-3x text-primary position-absolute end-0 bottom-0 me-4 mb-n1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+<br>
+<br>
+
+<app-footer></app-footer>

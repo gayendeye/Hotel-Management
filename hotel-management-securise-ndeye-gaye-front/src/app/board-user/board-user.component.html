@@ -1,0 +1,122 @@
+<!-- <div class="container">
+    <header class="jumbotron">
+      <p>{{ content }}</p>
+    </header>
+  </div>
+   -->
+
+   <app-navbar></app-navbar>   
+
+   <br>
+
+
+   <table > <br>
+    <tr>
+      <th>Guest Id</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>email</th>
+      <th>numberPhone</th>
+      <th>address</th>
+      <th>city</th>
+      <th>country</th>
+      <!-- <th>Number Room</th> -->
+      <!-- <th>Reservation Id</th>  -->
+    </tr>
+
+    <tbody *ngFor="let r of guest">
+      <td>{{ r.guestId }}</td>
+      <td>{{ r.firstName }}</td>
+      <td>{{ r.lastName }}</td>
+      <td>{{ r.email }}</td>
+      <td>{{ r.numberPhone }}</td>
+      <td>{{ r.address }}</td>
+      <td>{{ r.city }}</td>
+      <td>{{ r.country }}</td>
+      <!-- <td>{{ r.room?.numberRoom }}</td>  -->
+      <!-- <td>{{ r.reservation.reservationId }}</td> -->
+
+    </tbody>
+  </table>
+
+
+ <!-- Team Start -->
+ <div class="container-xxl py-5">
+  <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6>
+          <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
+      </div>
+      <div class="row g-4">
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="rounded shadow overflow-hidden">
+                  <div class="position-relative">
+                      <img class="img-fluid" src="assets/img/ndeye.png" alt="">
+                      <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+                  <div class="text-center p-4 mt-3">
+                      <h5 class="fw-bold mb-0">Ndeye SALIHAT GAYE</h5>
+                      <small>Etudiante</small>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="rounded shadow overflow-hidden">
+                  <div class="position-relative">
+                      <img class="img-fluid" src="assets/img/lam.jpg" alt="">
+                      <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+                  <div class="text-center p-4 mt-3">
+                      <h5 class="fw-bold mb-0">Baye Lam</h5>
+                      <small>Professeur</small>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="rounded shadow overflow-hidden">
+                  <div class="position-relative">
+                      <img class="img-fluid" src="assets/img/rokhaya.jpg" alt="">
+                      <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+                  <div class="text-center p-4 mt-3">
+                      <h5 class="fw-bold mb-0">Rokhaya DIOP DABO</h5>
+                      <small>Gestionnaire</small>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+              <div class="rounded shadow overflow-hidden">
+                  <div class="position-relative">
+                      <img class="img-fluid" src="assets/img/marshal.jpg" alt="">
+                      <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+                  <div class="text-center p-4 mt-3">
+                      <h5 class="fw-bold mb-0">Marshal Dieme </h5>
+                      <small>Professeur</small>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Team End -->
+
+<br><br><br>
+
+   <app-footer></app-footer>

@@ -1,0 +1,98 @@
+<app-navbar></app-navbar>
+
+    <div class="container">
+
+    <h1>Update Room</h1>
+
+    <a href="#" routerLink="/room" class="btn btn-primary">Back</a>
+    
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="form-group">
+            <label for="roomId">Room Id:</label>
+            <input formControlName="roomId"id="title" type="number" [(ngModel)]="room.roomId" class="form-control">
+            <div *ngIf="r['roomId'].touched && r['roomId'].invalid" class="alert alert-danger">
+            <div *ngIf="r['roomId'].errors && r['roomId'].errors['required']">Namz is required.</div>
+            </div>
+            </div>
+            
+
+
+            <div class="form-group">
+<label for="name">Name:</label>
+<input formControlName="name"id="title" type="text" [(ngModel)]="room.name" class="form-control">
+<div *ngIf="r['name'].touched && r['name'].invalid" class="alert alert-danger">
+<div *ngIf="r['name'].errors && r['name'].errors['required']">Namz is required.</div>
+</div>
+</div>
+
+
+
+        <div class="form-group">
+            <label for="numberRoom">Number Of the Room</label>
+            <textarea formControlName="numberRoom" id="numberRoom" type="text"  [(ngModel)]="room.numberRoom" class="form-control"></textarea>
+            <div *ngIf="r['numberRoom'].touched && r['numberRoom'].invalid" class="alert alert-danger">
+                <div *ngIf="r['numberRoom'].errors && r['numberRoom'].errors['required']">Number room is required.</div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="form-group">
+            <label for="name">status:</label>
+             <input formControlName="status" id="status"  type="text"  class="form-control" [(ngModel)]="room.status">
+                <div *ngIf="r['status'].touched && r['status'].invalid" class="alert alert-danger">
+                 <div *ngIf="r['status'].errors && r['status'].errors['required']">Name of the room is required.
+                 </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="telRoom">telRoom:</label>
+                 <input formControlName="telRoom" id="telRoom"  type="text"  class="form-control" [(ngModel)]="room.telRoom">
+                    <div *ngIf="r['telRoom'].touched && r['telRoom'].invalid" class="alert alert-danger">
+                     <div *ngIf="r['telRoom'].errors && r['telRoom'].errors['required']">Name of the room is required.
+                     </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="image">image:</label>
+                     <input formControlName="image" id="image"  type="text"  class="form-control" [(ngModel)]="room.image">
+                        <div *ngIf="r['image'].touched && r['image'].invalid" class="alert alert-danger">
+                         <div *ngIf="r['image'].errors && r['image'].errors['required']">Name of the room is required.
+                         </div>
+                        </div>
+                    </div>  
+                    
+                    <div class="form-group">
+                        <label for="description">description:</label>
+                         <input formControlName="description" id="description"  type="text"  class="form-control" [(ngModel)]="room.description">
+                            <div *ngIf="r['description'].touched && r['description'].invalid" class="alert alert-danger">
+                             <div *ngIf="r['description'].errors && r['description'].errors['required']">Name of the room is required.
+                             </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="maxCapacity">maxCapacity:</label>
+                             <input formControlName="maxCapacity" id="maxCapacity"  type="text"  class="form-control" [(ngModel)]="room.maxCapacity">
+                                <div *ngIf="r['maxCapacity'].touched && r['maxCapacity'].invalid" class="alert alert-danger">
+                                 <div *ngIf="r['maxCapacity'].errors && r['maxCapacity'].errors['required']">Name of the room is required.
+                                 </div>
+                                </div>
+                            </div>
+
+
+
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid" >Update</button>
+    </form>
+</div>
+
+<br><br><br>
+
+<app-footer></app-footer>

@@ -1,0 +1,164 @@
+<body>
+    <div class="container-xxl bg-white p-0">
+
+        <app-navbar></app-navbar>
+        
+         <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(assets/img/carousel-1.jpg);">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Contact</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+    
+        <!-- Contact Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <!-- <h6 class="section-title text-center text-primary text-uppercase">Contact Us</h6> -->
+                    <!-- <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1> -->
+                </div>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="row gy-4">
+                            <div class="col-md-4">
+                                <h6 class="section-title text-start text-primary text-uppercase">Booking</h6> <br>
+                                <a  class="mb-0" href="mailto:gayeeendeyeee@gmail.com">gayeeendeyeee@gmail.com</a>
+                            </div>
+                            <div class="col-md-4">
+                                <h6 class="section-title text-start text-primary text-uppercase">Director</h6> <br>
+                                <a  class="mb-0" href="mailto:gayeeendeyeee@gmail.com">gayeeendeyeee@gmail.com</a>
+                            </div>
+                            <div class="col-md-4">
+                                <h6 class="section-title text-start text-primary text-uppercase">Receptionist</h6> <br>
+                                <a  class="mb-0" href="mailto:gayeeendeyeee@gmail.com">ndeyesalihatgaye@gmail.com</a>
+                            </div>
+                        </div> <br><br>
+                    </div>
+                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.2s">
+                        <iframe class="position-relative rounded w-100 h-100"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <form (click)=" createcontact()" [formGroup]="form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div>
+                                            <input type="text" class="form-control" id="from" placeholder="gayeeendeyeee@gmail.com" name="from" [(ngModel)]="contacts.from" formControlName="from">
+                                            <label for="name"></label>
+                                            <!-- <div *ngIf="c['from'].touched && c['from'].invalid" class="alert alert-danger">
+                                                <div *ngIf="c['from'].errors && c['from'].errors['required']">Enter an Email Please.
+                                                </div>
+                                               </div>  -->
+                                            </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div>
+                                            <input type="text" class="form-control" id="to" placeholder="To" name="to" [(ngModel)]="contacts.to" formControlName="to">
+                                            <label for="name"></label>
+                                            <!-- <div *ngIf="c['to'].touched && c['to'].invalid" class="alert alert-danger">
+                                                <div *ngIf="c['to'].errors && c['to'].errors['required']">Enter an Email Please.
+                                                </div>
+                                               </div> -->
+                                        </div>
+                                        <br> 
+                                      </div>
+
+                                    <div class="col-12">
+                                        <div>
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject" [(ngModel)]="contacts.subject" formControlName="subject">
+                                            <label for="subject"></label>
+                                            <!-- <div *ngIf="c['subject'].touched && c['subject'].invalid" class="alert alert-danger">
+                                                <div *ngIf="c['subject'].errors && c['subject'].errors['required']">Subject is required.
+                                                </div>
+                                               </div> -->
+                                        </div>
+                                        <br> 
+                                     </div> 
+
+                                    <div class="col-12">
+                                        <div>
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px" name="text" [(ngModel)]="contacts.text" formControlName="text"></textarea>
+                                            <label for="message"></label>
+                                            <!-- <div *ngIf="c['message'].touched && c['message'].invalid" class="alert alert-danger">
+                                                <div *ngIf="c['message'].errors && c['message'].errors['required']">Message is required.
+                                                </div>
+                                               </div> -->
+                                        </div>
+                                        <br> 
+                                     </div>
+
+<div class="col-12">
+<!-- Button trigger modal-->
+<button  type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#modalRelatedContent" [disabled]="!form.valid"> SEND</button>
+  
+  <!--Modal: modalRelatedContent-->
+  <div class="modal fade right" id="modalRelatedContent" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header">
+          <p class="heading">Message recu avec succes</p>
+  
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+  
+        <!--Body-->
+        <div class="modal-body">
+  
+          <div class="row">
+            <div class="col-5">
+              <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(55).webp"
+                class="img-fluid" alt="">
+            </div>
+  
+            <div class="col-7">
+              <p><strong>Voulez vous visitez a nouveau notre site?</strong></p>
+              <p>Si oui cliquez sur le button. SALIHAT HOTEL vous remercie</p>
+              <button type="button" class="btn btn-info btn-md" routerLink="/room">Read more</button> &nbsp;
+              <button type="button" class="btn btn-info btn-md" routerLink="/home">Cancel</button>
+
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!--Modal: modalRelatedContent-->                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+       
+        <br><br><br><br><br>
+
+
+<app-footer></app-footer>
+
+        <!-- Back to Top -->
+        <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+
+</body>
